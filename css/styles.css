@@ -9,11 +9,15 @@ body{
     overflow: hidden;
 }
 .slider{
+    overflow: hidden;
     width: auto;
+}
+.slider-container{
     display: flex;
     transition:all 1s;
 }
 .slider-item{
+    display: inline-block;
     padding-top: 20px;
     width: 100vw;
 }

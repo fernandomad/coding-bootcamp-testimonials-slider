@@ -1,6 +1,6 @@
 const main=document.querySelector("#main"); 
 window.onload=()=>{
-    var slider=new Slider(main);
+    const slider=new Slider(main);
     document.querySelectorAll(".icon-next").forEach(next=>{
         next.addEventListener("click",nextItem)
     });
@@ -21,7 +21,7 @@ class Slider{
     constructor(slider){
         this.slider=slider;
         this.items=slider.querySelectorAll(".slider-item");
-        this.slider.style.width = `${this.items.length*100}vw`;
+        this.slider.querySelector(".slider-container").style.width = `${this.items.length*100}vw`;
     }
     next(){
         this.currentPosition=(this.currentPosition>=this.items.length-1)?0:this.currentPosition+1;
@@ -33,6 +33,6 @@ class Slider{
     }
     move(){
         let x=this.currentPosition*(-100);
-        this.slider.style.transform=`translate(${x}vw,0)`;
+        this.slider.querySelector(".slider-container").style.transform=`translate(${x}vw,0)`;
     }
 }
