@@ -6,16 +6,16 @@ body{
     font-size: 32px;
     margin: 0;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
 }
 .slider{
     width: auto;
     display: flex;
-    overflow: hidden;
+    transition:all 1s;
 }
 .slider-item{
     padding-top: 20px;
     width: 100vw;
-    transition:all 1s;
 }
 .item-header{
     width: 325px;
@@ -58,6 +58,9 @@ body{
     border-radius: 50% 0 0 50%;
     padding-right: 30px;
 
+}
+.icon-prev:hover,.icon-next:hover{
+    background-color: var(--grayish-blue);
 }
 .icon-next{
     background-image: url("../images/icon-next.svg");
